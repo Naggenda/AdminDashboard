@@ -18,6 +18,10 @@
   display: flex;
 }
 
+.logo-sect{
+  padding: 20px 0;
+}
+
 .active{
   color: white;
   background: #282c34;
