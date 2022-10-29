@@ -1,10 +1,11 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Form from './partials/form';
 
 export default function profile() {
   return (
-    <div className="with-react-tabs">
+    <div className="with-react-tabs main-content">
       <Tabs className="tabs-data">
         <TabList className="tabs">
           <Tab>Personal info</Tab>
@@ -15,20 +16,7 @@ export default function profile() {
         <TabPanel>
           <div className="tab-content">
             <h2>My Profile</h2>
-            <form>
-              <div className="form-group">
-                <label htmlFor="fullname">Full Name</label>
-                <input type="text" name="fullname" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="contact">Contact</label>
-                <input type="tel" name="contact" />
-              </div>
-            </form>
+            <Form />
           </div>
         </TabPanel>
         <TabPanel>
