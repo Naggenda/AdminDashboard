@@ -1,7 +1,9 @@
 /*jshint esversion: 6 */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Profile from "./views/Profile/profile";
+import Profile from "./views/Profile";
 import Teams from "./views/Teams";
+import Clients from "./views/Clients";
+import Track from './views/Tracking';
 
 import Navbar from "./Layout/Sidebar";
 import Sidebar from "./Layout/Navbar";
@@ -16,7 +18,9 @@ function RoutesBrowser() {
       </div>
       <Routes>
           <Route path='/profile' element={ <Profile />} />
-          <Route path='/teams' element={ <Teams/> } />
+          <Route path='/teams' element={ <Teams /> } />
+          <Route path='/clients' element={ <Clients /> } />
+          <Route path='/track' element={ <Track /> } />
         </Routes>
       </Router>
     
