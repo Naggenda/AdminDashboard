@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import Form from './partials/form';
+import Form from "./partials/form";
 
 export default function profile() {
   return (
