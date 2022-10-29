@@ -1,55 +1,96 @@
-.tabs{
+.tabs {
   display: flex;
   flex-direction: column;
   width: 20vw;
+  padding-right: 20px;
 }
 
-.tabs-data{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 20px;
-}
-
-.tab-content{
-  width: 65vw;
-}
-
-.navbar-fixed{
-  display: flex;
-}
-
-.logo-sect{
+.tabs ul li{
   padding: 20px 0;
 }
 
-.active{
+.vl{
+  border: 1px solid gray;
+  margin-right: 20px;
+}
+
+input{
+  padding: 5px;
+}
+
+
+.react-tabs__tab--selected {
+  color: white;
+  background: black;
+  border-radius: 0;
+}
+
+.with-react-tabs{
+  position: relative;
+  top: 95px;
+  left: 310px;
+  padding: 20px;
+  border: 1px solid gray;
+  width: 70vw;
+}
+
+.react-tabs__tab{
+  margin: 10px 0;
+}
+.tabs-data {
+  display: flex;
+}
+
+
+.form-group{
+  display: flex;
+  margin:  10px 0;
+}
+.navbar-fixed {
+  display: flex;
+}
+
+.logo-sect {
+  padding: 20px 0;
+}
+
+.active {
   color: white;
   background: #282c34;
 }
 
-a{
+a {
   padding: 10px;
   margin: 5px 0px;
   text-decoration: none;
   color: #282c34;
 }
 
-.sidenav{
+.sidenav {
   display: flex;
   flex-direction: column;
-  width: 15vw;
   padding: 20px;
   box-shadow: 0 0 10px 0;
   height: 100vh;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
 }
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
-  height: 10px;
-  padding: 20px 45px;
+  padding: 0px 40px;
   align-items: center;
   box-shadow: 10px 0 10px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 300px;
+  height: 75px;
+  z-index: 3;
 }
 
 .App-logo {
