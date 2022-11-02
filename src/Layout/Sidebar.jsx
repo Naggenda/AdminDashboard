@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import React from "react";
+import Dropdown from '../Components/dropdown';
 
 const Sidebar = () => {
   return (
@@ -12,7 +13,7 @@ const Sidebar = () => {
           </form>
         </div>
         <div className="profile">
-        <NavLink to="/profile">Pro</NavLink>
+           <Dropdown />
         </div>
     </div>
   );

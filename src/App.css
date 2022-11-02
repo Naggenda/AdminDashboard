@@ -41,6 +41,10 @@ input{
   display: flex;
 }
 
+li{
+  list-style: none;
+}
+
 
 .form-group{
   display: flex;
