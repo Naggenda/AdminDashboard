@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import Logout from '../Components/logout';
+
 
 const Test = () => {
   const [open, setOpen] = React.useState(false);
@@ -15,16 +17,17 @@ const Test = () => {
 
   const handleMenuTwo = () => {
     // do something
+    <Logout />
     setOpen(false);
   };
 
   return (
     <Dropdown
       open={open}
-      trigger={<button onClick={handleOpen}>Dropdown</button>}
+      trigger={<button onClick={handleOpen}>prof</button>}
       menu={[
         <NavLink to="/profile" onClick={handleMenuOne}>Profile</NavLink>,
-        <button onClick={handleMenuTwo}>LogOut</button>,
+        <input type="button" onClick={handleMenuTwo} className="btn btn-danger" value="Logout"/>,
       ]}
     />
   );
