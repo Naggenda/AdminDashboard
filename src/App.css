@@ -136,3 +136,23 @@ a {
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 475px){
+  .sidenav{
+    display: none;
+  }
+  .navbar{
+    left: 0;
+  }
+  .main-content{
+    left: 0;
+    width: 100%;
+  }
+
+  .tabs-data{
+    flex-direction: column;
+  }
+  .tabs{
+    width: fit-content;
+    flex-direction: row;
+  }
+}
