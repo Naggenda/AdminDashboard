@@ -2,6 +2,7 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Form from "./partials/form";
+import ChangePassword from "./partials/changepassword"
 
 export default function profile() {
   return (
@@ -30,11 +31,8 @@ export default function profile() {
         </TabPanel>
         <TabPanel>
           <div className="tab-content">
-            <h2>Tab content 3</h2>
-            <p>
-              Here is your tab content. You can separate this as a component.
-            </p>
-            <p>Lorem ipsum dolor sit amet ...</p>
+            <h2>Change Password</h2>
+            <ChangePassword />
           </div>
         </TabPanel>
       </Tabs>

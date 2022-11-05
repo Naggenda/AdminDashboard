@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* buttons */
+
+.btn{
+  border-radius: 4px;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 1px solid;
+  cursor: pointer;
+}
+
+.btn-primary{
+  background: blue;
+  border: none;
+}
+
+/* button style end */
+
+.dropdown button{
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid grey;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.dropdown ul{
+  box-shadow: 0 0 4px 0;
+  position: absolute;
+  top: 58px;
+  padding: 10px;
+  width: 100px;
+  right: 30px;
+  background: white;
+}
+
+.dropdown ul li{
+  padding: 10px 0;
+}
+
+/* logoout modal */
+
+.logout-modal{
+  border: 1px solid gray;
+  background-color: white;
+  z-index: 1;
+  padding: 10px;
+  position: absolute;
+}
+
+/* table */
+.table{
+  border: 1px solid gray;
+  margin: 10px 0;
+  text-align: start;
+}
+.table th,td{
+  text-align: justify;
+  border: 1px solid grey;
+  padding: 10px;
+}
