@@ -1,3 +1,18 @@
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #f8f9fd;
+}
+.classic{
+  /* display: flex; */
+  justify-content: space-between;
+}
 .tabs {
   display: flex;
   flex-direction: column;
@@ -73,10 +88,14 @@ a {
   text-decoration: none;
   color: #282c34;
 }
-
+.navbar-toggle{
+  display: flex;
+  flex-direction: column
+}
 .sidenav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   padding: 20px;
   box-shadow: 0 0 10px 0;
   height: 100vh;

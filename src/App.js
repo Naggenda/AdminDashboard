@@ -5,7 +5,9 @@ import Login from './Login';
 
 function App() {
   return (
-    <Login />
+    <div className="">
+      <Login />
+    </div>
   );
 }
 

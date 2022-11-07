@@ -57,7 +57,7 @@ function Login() {
 
   // JSX code for login form
   const renderForm = (
-    <div className="App1">
+    <div className="App">
       <div className="form login-form">
         <div className="title">Sign In</div>
 
