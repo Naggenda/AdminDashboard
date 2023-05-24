@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./partials/clients.css";
-import { users } from "./partials/users";
+// import { users } from "./partials/users";
 import UserTable from "./partials/Table";
+import { Link } from "react-router-dom";
 
 const Clients = () => {
   const [query, setQuery] = useState("");
@@ -20,7 +21,7 @@ const Clients = () => {
     <div className="main-content">
       <div className="top-sect">
         <h2 className="title-bg">User Accounts</h2>
-        <button className="btn btn-primary">New User</button>
+        <Link to='/newUser'><button className="btn btn-primary">New User</button></Link>
       </div>
       <div className="search">
         <label htmlFor="search">Search: </label>
@@ -32,7 +33,7 @@ const Clients = () => {
           placeholder="search..."
           onChange={e => setQuery(e.target.value)}
         />
-        <UserTable data={search(users)} />
+        <UserTable data={search} />
       </div>
     </div>
   );

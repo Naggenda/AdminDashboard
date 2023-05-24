@@ -1,52 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import ReactDOM from "react-dom";
 import RoutesBrowse from "./RoutesBrowser";
-
+import { toast } from "react-toastify";
 import "./styles.css";
 
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  // User Login info
-  const database = [
-    {
-      username: "user1",
-      password: "pass1"
-    },
-    {
-      username: "user2",
-      password: "pass2"
-    }
-  ];
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let inputobj = { username, password };
+    fetch('http://localhost:8000/adminuser', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(inputobj)
+    }).then((res) => {
+      return res.json();
+    }).then((resp) => {
+      console.log(resp.username);
+      if (username !== resp.username ) {
+        toast.error('enter valid username');
+      }
+      if (Object.keys(resp).length === 0) {
+        toast.error('Please Enter valid username');
+      } else {
+        if (resp.password === password) {
+          toast.success('sucess');
+          sessionStorage.setItem('username',username);
+          setIsSubmitted(true);
+        } else {
+          toast.error('Please Enter valid credentials');
+        }
+      }
+
+    }).catch((err) => {
+      toast.error('Wrong user credentials');
+    })
+  }
 
   const errors = {
     uname: "invalid username",
     pass: "invalid password"
-  };
-
-  const handleSubmit = event => {
-    //Prevent page reload
-    event.preventDefault();
-
-    var { uname, pass } = document.forms[0];
-
-    // Find user login info
-    const userData = database.find(user => user.username === uname.value);
-
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
-    }
   };
 
   // Generate JSX code for error message
@@ -64,12 +66,12 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="input-container">
             <label>Username </label>
-            <input type="text" name="uname" required />
+            <input type="text" name="uname" value={username} onChange={(e) => setUsername(e.target.value)} required />
             {renderErrorMessage("uname")}
           </div>
           <div className="input-container">
             <label>Password </label>
-            <input type="password" name="pass" required />
+            <input type="password" name="pass" value={password} onChange={(e) => setPassword(e.target.value)} required />
             {renderErrorMessage("pass")}
           </div>
           <div className="button-container">

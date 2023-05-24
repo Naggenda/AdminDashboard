@@ -6,6 +6,7 @@ import Teams from "./views/Teams";
 import Clients from "./views/Clients";
 import Track from "./views/Tracking";
 import Report from "./views/Reports";
+import NewUser from "./views/Clients/partials/NewUser";
 
 import Navbar from "./Layout/Sidebar";
 import Sidebar from "./Layout/Navbar";
@@ -25,6 +26,7 @@ function RoutesBrowser() {
         <Route path="/clients" element={<Clients />} />
         <Route path="/track" element={<Track />} />
         <Route path="/documents" element={<Report />} />
+        <Route path="/newUser" element={<NewUser />} />
       </Routes>
     </Router>
   );
